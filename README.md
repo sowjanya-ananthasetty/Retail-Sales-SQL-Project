@@ -54,6 +54,7 @@ Successfully designed and created the following tables:
 * DEFAULT
 * SHOW TABLES
 * SELECT
+* DROP
 
 ### 7. GitHub Preparation
 

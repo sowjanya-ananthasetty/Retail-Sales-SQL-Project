@@ -4,6 +4,7 @@ A relational database project built using **MySQL 8.0** to simulate a retail sal
 
 ---
 
+
 # 📌 Project Overview
 
 The **Retail Sales SQL Project** is designed to simulate a real-world retail sales database. It includes customers, products, suppliers, categories, orders, and order items with properly defined relationships using primary and foreign keys.

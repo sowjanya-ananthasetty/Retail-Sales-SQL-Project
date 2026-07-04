@@ -7,6 +7,7 @@
 * Created the `retail_sales` database.
 * Selected the database using `USE retail_sales`.
 
+
 ### 2. Database Schema Design
 
 Successfully designed and created the following tables:

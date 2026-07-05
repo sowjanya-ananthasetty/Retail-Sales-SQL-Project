@@ -373,87 +373,126 @@ SELECT product_name AS Product_Name,
 FROM products;
 
 
+-- ==========================================
+-- Phase 2 : WHERE Clause
+-- ==========================================
 
- -- Phase 2: WHERE Clause
--- Products priced above ₹1000.
-select * from products
-where price>1000;
--- Products priced below ₹500.
+-- ==========================================
+-- WHERE
+-- ==========================================
 
-select * from products
-where price<500;
--- Products priced between ₹500 and ₹5000.
+-- Question 32: Display products priced above ₹1000.
+SELECT *
+FROM products
+WHERE price > 1000;
 
-select * from products
-where price >500 and price<5000;
+-- Question 33: Display products priced below ₹500.
+SELECT *
+FROM products
+WHERE price < 500;
 
-select * from products
-where price between 500 and 5000;
--- Customers from Bangalore.
+-- Question 34: Display products priced between ₹500 and ₹5000.
+SELECT *
+FROM products
+WHERE price BETWEEN 500 AND 5000;
 
-select * from customers
-where city='Bangalore';
--- Customers from Hyderabad.
+-- Question 35: Display customers from Bangalore.
+SELECT *
+FROM customers
+WHERE city = 'Bangalore';
 
-select * from customers
-where city='Hyderabad';
--- Customers not from Bangalore.
+-- Question 36: Display customers from Hyderabad.
+SELECT *
+FROM customers
+WHERE city = 'Hyderabad';
 
-select * from customers
-where city Not IN ('Bangalore');
--- Customers from Andhra Pradesh.
+-- Question 37: Display customers not from Bangalore.
+SELECT *
+FROM customers
+WHERE city <> 'Bangalore';
 
-select * from customers
-where state='Andhra Pradesh';
--- Orders placed after 2025-03-01.
+-- Question 38: Display customers from Andhra Pradesh.
+SELECT *
+FROM customers
+WHERE state = 'Andhra Pradesh';
 
-select * from orders
-where order_date > '2025-03-01';
--- Delivered orders.
+-- Question 39: Display orders placed after 2025-03-01.
+SELECT *
+FROM orders
+WHERE order_date > '2025-03-01';
 
-select * from orders
-where order_status='Delivered';
--- Cancelled orders.
+-- Question 40: Display delivered orders.
+SELECT *
+FROM orders
+WHERE order_status = 'Delivered';
 
-select * from orders where order_status='Cancelled';
+-- Question 41: Display cancelled orders.
+SELECT *
+FROM orders
+WHERE order_status = 'Cancelled';
+
+-- ==========================================
 -- LIKE
--- Customer names starting with R.
+-- ==========================================
 
-select * from customers where first_name LIKE 'R%';
--- Customer names ending with a.
+-- Question 42: Display customers whose first name starts with 'R'.
+SELECT *
+FROM customers
+WHERE first_name LIKE 'R%';
 
-select * from customers where first_name LIKE '%a';
--- Emails ending with gmail.com.
+-- Question 43: Display customers whose first name ends with 'a'.
+SELECT *
+FROM customers
+WHERE first_name LIKE '%a';
 
-select * from customers
-where email LIKE '%gmail.com';
--- Product names containing Book.
+-- Question 44: Display customers whose email ends with 'gmail.com'.
+SELECT *
+FROM customers
+WHERE email LIKE '%gmail.com';
 
-select * from products
-where product_name LIKE '%book%';
--- Supplier names starting with A.
+-- Question 45: Display products whose name contains 'Book'.
+SELECT *
+FROM products
+WHERE product_name LIKE '%Book%';
 
-select * from suppliers where supplier_name LIKE 'A%';
+-- Question 46: Display suppliers whose name starts with 'A'.
+SELECT *
+FROM suppliers
+WHERE supplier_name LIKE 'A%';
+
+-- ==========================================
 -- IN
--- Customers from Bangalore, Hyderabad, and Chennai.
+-- ==========================================
 
-select * from customers
-where city In('Bangalore', 'Hyderabad','Chennai');
--- Orders with status Delivered or Pending.
+-- Question 47: Display customers from Bangalore, Hyderabad, and Chennai.
+SELECT *
+FROM customers
+WHERE city IN ('Bangalore', 'Hyderabad', 'Chennai');
 
-select * from orders where order_status In('Delivered', 'Pending');
--- Products in category IDs 1, 2, and 5.
+-- Question 48: Display orders with Delivered or Pending status.
+SELECT *
+FROM orders
+WHERE order_status IN ('Delivered', 'Pending');
 
-select * from products where category_id IN(1, 2, 5);
+-- Question 49: Display products belonging to category IDs 1, 2, and 5.
+SELECT *
+FROM products
+WHERE category_id IN (1, 2, 5);
+
+-- ==========================================
 -- BETWEEN
--- Products priced between ₹1000 and ₹10000.
+-- ==========================================
 
-select * from products 
-where price between 1000 AND 10000;
--- Orders placed between January and April.
+-- Question 50: Display products priced between ₹1000 and ₹10000.
+SELECT *
+FROM products
+WHERE price BETWEEN 1000 AND 10000;
 
-select * from orders
-where month(order_date) between 01 and 04;
+-- Question 51: Display orders placed between January and April.
+SELECT *
+FROM orders
+WHERE order_date BETWEEN '2025-01-01' AND '2025-04-30';
+
 
 -- Phase 3: UPDATE
 -- Update a customer's city.
@@ -507,7 +546,9 @@ where supplier_name = 'Fresh Foods';
 update suppliers
 SET contact_email='freshfoods@gmail.com'
 where supplier_name like 'Fresh%';
--- ✅ Phase 4: DELETE
+
+
+--  Phase 4: DELETE
 -- Delete one customer.
 select * from customers;
 select * from order_items;

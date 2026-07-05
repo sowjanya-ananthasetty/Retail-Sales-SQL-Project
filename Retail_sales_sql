@@ -493,59 +493,78 @@ SELECT *
 FROM orders
 WHERE order_date BETWEEN '2025-01-01' AND '2025-04-30';
 
+-- ==========================================
+-- Phase 3 : UPDATE
+-- ==========================================
 
--- Phase 3: UPDATE
--- Update a customer's city.
+-- Question 52: Update a customer's city.
+UPDATE customers
+SET city = 'Gudur'
+WHERE city = 'Nellore';
 
-update customers
-SET city ='Gudur'
-where city='Nellore';
+-- Verify the updated customer record.
+SELECT *
+FROM customers;
 
-select * from customers;
--- Update a customer's phone number.
-
+-- Question 53: Update a customer's phone number.
 UPDATE customers
 SET phone = '1234567890'
-WHERE customer_id=12;
+WHERE customer_id = 12;
 
--- Increase laptop price.
+-- Verify the updated customer record.
+SELECT *
+FROM customers
+WHERE customer_id = 12;
 
-select * from products;
-
-update products
+-- Question 54: Increase the Laptop price.
+UPDATE products
 SET price = 70000
-where product_name='Laptop';
+WHERE product_name = 'Laptop';
 
--- Reduce football price.
+-- Verify the updated product.
+SELECT *
+FROM products
+WHERE product_name = 'Laptop';
 
-update products
-SET price=1000
-WHERE product_name='Football';
--- Update stock quantity.
+-- Question 55: Reduce the Football price.
+UPDATE products
+SET price = 1000
+WHERE product_name = 'Football';
 
-update products
+-- Verify the updated product.
+SELECT *
+FROM products
+WHERE product_name = 'Football';
+
+-- Question 56: Update the stock quantity of Laptop.
+UPDATE products
 SET stock_quantity = 50
-where product_name='Laptop';
+WHERE product_name = 'Laptop';
 
--- Change an order status.
+-- Verify the updated product.
+SELECT *
+FROM products
+WHERE product_name = 'Laptop';
 
-select * from orders;
+-- Question 57: Change an order status.
+UPDATE orders
+SET order_status = 'Pending'
+WHERE customer_id = 1;
 
-update orders
-SET order_status='Pending'
-WHERE customer_id=1;
+-- Verify the updated orders.
+SELECT *
+FROM orders
+WHERE customer_id = 1;
 
--- Change a supplier email.
+-- Question 58: Change a supplier email.
+UPDATE suppliers
+SET contact_email = 'freshfoods@gmail.com'
+WHERE supplier_name = 'Fresh Foods';
 
-select * from suppliers;
-
-update suppliers
-SET contact_email='freshfoods@gmail.com'
-where supplier_name = 'Fresh Foods';
-
-update suppliers
-SET contact_email='freshfoods@gmail.com'
-where supplier_name like 'Fresh%';
+-- Verify the updated supplier.
+SELECT *
+FROM suppliers
+WHERE supplier_name = 'Fresh Foods';
 
 
 --  Phase 4: DELETE

@@ -1,12 +1,10 @@
-##  Progress Update (Day 3)
+## ✅ Completed Today
 
-### ✅ Completed Today
-
-#### 1. Aggregate Functions
+### 1. Aggregate Functions
 
 Practiced SQL aggregate functions to perform data analysis.
 
-Topics covered:
+**Topics covered:**
 
 * COUNT()
 * SUM()
@@ -15,23 +13,23 @@ Topics covered:
 * MAX()
 * ROUND()
 
-Implemented queries to:
+**Implemented queries to:**
 
 * Count customers, products, suppliers, orders, and categories.
 * Calculate total stock and inventory value.
 * Calculate total revenue from order items.
-* Find average product price and stock.
+* Calculate average product price and stock.
 * Identify cheapest and most expensive products.
 * Round average values.
 * Combine multiple aggregate functions in a single query.
 
 ---
 
-#### 2. GROUP BY
+### 2. GROUP BY
 
 Learned how to group data for business reporting.
 
-Implemented queries for:
+**Implemented queries for:**
 
 * Customers grouped by city.
 * Customers grouped by state.
@@ -52,20 +50,26 @@ Implemented queries for:
 
 ---
 
-#### 3. HAVING Clause
+### 3. HAVING Clause
 
-Started practicing the HAVING clause for filtering grouped results.
+Completed practicing the `HAVING` clause to filter grouped results.
 
-Prepared questions for:
+**Implemented queries for:**
 
-* Categories with more than 2 products.
+* Categories having more than 2 products.
 * Suppliers supplying more than 2 products.
-* Cities with more than 1 customer.
+* Cities having more than 1 customer.
+* States having more than 1 customer.
 * Payment methods used more than 3 times.
+
+**Key Concept Learned:**
+
+* `WHERE` filters rows **before** grouping.
+* `HAVING` filters groups **after** aggregation.
 
 ---
 
-## 📚 SQL Concepts Covered So Far
+# 📚 SQL Concepts Covered So Far
 
 * Database Creation
 * Table Design
@@ -85,37 +89,65 @@ Prepared questions for:
 * DELETE
 * Aggregate Functions
 * GROUP BY
-* HAVING (In Progress)
+* HAVING
 
 ---
 
-## 📈 Project Progress
+# 📈 Project Progress
 
-| Topic                         |     Status    |
-| ----------------------------- | :-----------: |
-| Database Design               |  ✅ Completed  |
-| Sample Data                   |  ✅ Completed  |
-| Basic SQL Queries             |  ✅ Completed  |
-| WHERE Clause                  |  ✅ Completed  |
-| UPDATE                        |  ✅ Completed  |
-| DELETE                        |  ✅ Completed  |
-| Aggregate Functions           |  ✅ Completed  |
-| GROUP BY                      |  ✅ Completed  |
-| HAVING                        | ⏳ In Progress |
-| JOINs                         |   ⏳ Pending   |
-| Subqueries                    |   ⏳ Pending   |
-| CTEs                          |   ⏳ Pending   |
-| Window Functions              |   ⏳ Pending   |
-| Views                         |   ⏳ Pending   |
-| Stored Procedures             |   ⏳ Pending   |
-| Triggers                      |   ⏳ Pending   |
-| Indexing & Query Optimization |   ⏳ Pending   |
-| Business Reports              |   ⏳ Pending   |
+| Topic                         |    Status   |
+| ----------------------------- | :---------: |
+| Database Design               | ✅ Completed |
+| Sample Data                   | ✅ Completed |
+| Basic SQL Queries             | ✅ Completed |
+| WHERE Clause                  | ✅ Completed |
+| UPDATE                        | ✅ Completed |
+| DELETE                        | ✅ Completed |
+| Aggregate Functions           | ✅ Completed |
+| GROUP BY                      | ✅ Completed |
+| HAVING                        | ✅ Completed |
+| JOINs                         |    ⏳ Next   |
+| Subqueries                    |  ⏳ Pending  |
+| CTEs                          |  ⏳ Pending  |
+| Window Functions              |  ⏳ Pending  |
+| Views                         |  ⏳ Pending  |
+| Stored Procedures             |  ⏳ Pending  |
+| Triggers                      |  ⏳ Pending  |
+| Indexing & Query Optimization |  ⏳ Pending  |
+| Business Reports              |  ⏳ Pending  |
 
 ---
 
-### 🚀 Next Goal
+# 🚀 Next Goal
 
-* Complete HAVING clause practice.
-* Learn and practice SQL JOINs (INNER JOIN, LEFT JOIN, RIGHT JOIN, and Multiple JOINs).
-* Continue building real-world business reports using SQL.
+### SQL JOINs
+
+Practice and master:
+
+* INNER JOIN
+* LEFT JOIN
+* RIGHT JOIN
+* FULL OUTER JOIN (where supported)
+* CROSS JOIN
+* SELF JOIN
+* Multiple JOINs
+
+**Business report practice:**
+
+* Customer order history
+* Product category reports
+* Supplier inventory reports
+* Revenue by category
+* Revenue by supplier
+* Order details with customer and product information
+
+**Long-term roadmap:**
+
+* Subqueries
+* Common Table Expressions (CTEs)
+* Window Functions
+* Views
+* Stored Procedures
+* Triggers
+* Indexing & Query Optimization
+* Advanced Business Reports

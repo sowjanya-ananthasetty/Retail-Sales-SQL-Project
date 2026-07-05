@@ -202,4 +202,587 @@ INSERT INTO order_items(order_id,product_id,quantity,unit_price) VALUES
 (25,5,2,800.00);
 
 show tables;
+-- ==========================================
+-- Phase 1 : Basic SQL Queries
+-- ==========================================
+
+-- ==========================================
+-- SELECT
+-- ==========================================
+
+-- Question 1: Display all customers.
+SELECT *
+FROM customers;
+
+-- Question 2: Display all products.
+SELECT *
+FROM products;
+
+-- Question 3: Display all suppliers.
+SELECT *
+FROM suppliers;
+
+-- Question 4: Display all categories.
+SELECT *
+FROM categories;
+
+-- Question 5: Display all orders.
+SELECT *
+FROM orders;
+
+-- Question 6: Display all order items.
+SELECT *
+FROM order_items;
+
+-- ==========================================
+-- Selecting Specific Columns
+-- ==========================================
+
+-- Question 7: Display only customer first names.
+SELECT first_name
+FROM customers;
+
+-- Question 8: Display customer first and last names.
+SELECT first_name,
+       last_name
+FROM customers;
+
+-- Question 9: Display only product names.
+SELECT product_name
+FROM products;
+
+-- Question 10: Display product name and price.
+SELECT product_name,
+       price
+FROM products;
+
+-- Question 11: Display supplier names.
+SELECT supplier_name
+FROM suppliers;
+
+-- Question 12: Display customer city and state.
+SELECT city,
+       state
+FROM customers;
+
+-- ==========================================
+-- DISTINCT
+-- ==========================================
+
+-- Question 13: Display unique cities.
+SELECT DISTINCT city
+FROM customers;
+
+-- Question 14: Display unique states.
+SELECT DISTINCT state
+FROM customers;
+
+-- Question 15: Display unique payment methods.
+SELECT DISTINCT payment_method
+FROM orders;
+
+-- ==========================================
+-- ORDER BY
+-- ==========================================
+
+-- Question 16: Display customers ordered by first name.
+SELECT *
+FROM customers
+ORDER BY first_name ASC;
+
+-- Question 17: Display products ordered by price (lowest first).
+SELECT *
+FROM products
+ORDER BY price ASC;
+
+-- Question 18: Display products ordered by price (highest first).
+SELECT *
+FROM products
+ORDER BY price DESC;
+
+-- Question 19: Display orders ordered by order date.
+SELECT *
+FROM orders
+ORDER BY order_date ASC;
+
+-- Question 20: Display latest orders.
+SELECT *
+FROM orders
+ORDER BY order_date DESC;
+
+-- Question 21: Display suppliers ordered alphabetically.
+SELECT *
+FROM suppliers
+ORDER BY supplier_name ASC;
+
+-- ==========================================
+-- LIMIT
+-- ==========================================
+
+-- Question 22: Display the first 5 customers.
+SELECT *
+FROM customers
+LIMIT 5;
+
+-- Question 23: Display the first 10 products.
+SELECT *
+FROM products
+LIMIT 10;
+
+-- Question 24: Display the latest 5 orders.
+SELECT *
+FROM orders
+ORDER BY order_date DESC
+LIMIT 5;
+
+-- Question 25: Display the top 3 most expensive products.
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 3;
+
+-- Question 26: Display the top 5 cheapest products.
+SELECT *
+FROM products
+ORDER BY price ASC
+LIMIT 5;
+
+-- ==========================================
+-- Aliases (AS)
+-- ==========================================
+
+-- Question 27: Display customer first name as Customer_Name.
+SELECT first_name AS Customer_Name
+FROM customers;
+
+-- Question 28: Display product price as Selling_Price.
+SELECT price AS Selling_Price
+FROM products;
+
+-- Question 29: Display supplier name as Supplier.
+SELECT supplier_name AS Supplier
+FROM suppliers;
+
+-- Question 30: Display order date as Purchase_Date.
+SELECT order_date AS Purchase_Date
+FROM orders;
+
+-- Question 31: Display product name and stock quantity with aliases.
+SELECT product_name AS Product_Name,
+       stock_quantity AS Stock_Quantity
+FROM products;
+
+
+
+ -- Phase 2: WHERE Clause
+-- Products priced above ₹1000.
+select * from products
+where price>1000;
+-- Products priced below ₹500.
+
+select * from products
+where price<500;
+-- Products priced between ₹500 and ₹5000.
+
+select * from products
+where price >500 and price<5000;
+
+select * from products
+where price between 500 and 5000;
+-- Customers from Bangalore.
+
+select * from customers
+where city='Bangalore';
+-- Customers from Hyderabad.
+
+select * from customers
+where city='Hyderabad';
+-- Customers not from Bangalore.
+
+select * from customers
+where city Not IN ('Bangalore');
+-- Customers from Andhra Pradesh.
+
+select * from customers
+where state='Andhra Pradesh';
+-- Orders placed after 2025-03-01.
+
+select * from orders
+where order_date > '2025-03-01';
+-- Delivered orders.
+
+select * from orders
+where order_status='Delivered';
+-- Cancelled orders.
+
+select * from orders where order_status='Cancelled';
+-- LIKE
+-- Customer names starting with R.
+
+select * from customers where first_name LIKE 'R%';
+-- Customer names ending with a.
+
+select * from customers where first_name LIKE '%a';
+-- Emails ending with gmail.com.
+
+select * from customers
+where email LIKE '%gmail.com';
+-- Product names containing Book.
+
+select * from products
+where product_name LIKE '%book%';
+-- Supplier names starting with A.
+
+select * from suppliers where supplier_name LIKE 'A%';
+-- IN
+-- Customers from Bangalore, Hyderabad, and Chennai.
+
+select * from customers
+where city In('Bangalore', 'Hyderabad','Chennai');
+-- Orders with status Delivered or Pending.
+
+select * from orders where order_status In('Delivered', 'Pending');
+-- Products in category IDs 1, 2, and 5.
+
+select * from products where category_id IN(1, 2, 5);
+-- BETWEEN
+-- Products priced between ₹1000 and ₹10000.
+
+select * from products 
+where price between 1000 AND 10000;
+-- Orders placed between January and April.
+
+select * from orders
+where month(order_date) between 01 and 04;
+
+-- Phase 3: UPDATE
+-- Update a customer's city.
+
+update customers
+SET city ='Gudur'
+where city='Nellore';
+
+select * from customers;
+-- Update a customer's phone number.
+
+UPDATE customers
+SET phone = '1234567890'
+WHERE customer_id=12;
+
+-- Increase laptop price.
+
+select * from products;
+
+update products
+SET price = 70000
+where product_name='Laptop';
+
+-- Reduce football price.
+
+update products
+SET price=1000
+WHERE product_name='Football';
+-- Update stock quantity.
+
+update products
+SET stock_quantity = 50
+where product_name='Laptop';
+
+-- Change an order status.
+
+select * from orders;
+
+update orders
+SET order_status='Pending'
+WHERE customer_id=1;
+
+-- Change a supplier email.
+
+select * from suppliers;
+
+update suppliers
+SET contact_email='freshfoods@gmail.com'
+where supplier_name = 'Fresh Foods';
+
+update suppliers
+SET contact_email='freshfoods@gmail.com'
+where supplier_name like 'Fresh%';
+-- ✅ Phase 4: DELETE
+-- Delete one customer.
+select * from customers;
+select * from order_items;
+
+
+DELETE FROM order_items
+WHERE order_id IN (
+    SELECT order_id
+    FROM orders
+    WHERE customer_id = (
+        SELECT customer_id
+        FROM customers
+        WHERE first_name = 'Rayan'
+    )
+);
+
+delete from orders
+WHERE customer_id = (
+        SELECT customer_id
+        FROM customers
+        WHERE first_name = 'Rayan'
+);
+
+delete from customers where first_name='Rayan';
+
+-- Delete one supplier.
+select * from order_items;
+select * from products;
+select * from suppliers;
+
+delete from order_items
+where product_id IN(select product_id from products 
+where supplier_id = (select supplier_id from suppliers where supplier_name='Fresh Foods'));
+
+
+delete from products 
+where supplier_id = (select supplier_id from suppliers where supplier_name='Fresh Foods');
+
+delete from suppliers where supplier_name = 'Fresh Foods';
+
+-- Delete one cancelled order.
+select * from orders;
+select * from customers;
+select * from order_items;
+
+delete from order_items 
+where order_id = (select order_id from orders 
+where order_status = 'Cancelled' and payment_method='Credit card');
+
+delete from orders where order_status = 'Cancelled' and payment_method='Credit card';
+
+-- Delete one category.
+select * from products;
+select * from categories;
+
+
+delete from order_items where product_id IN (select product_id from products
+where category_id=(select category_id from categories where category_name = 'Clothing'));
+
+delete from products
+where category_id=(select category_id from categories where category_name = 'Clothing'); 
+
+delete from categories
+where category_name='Clothing';
+
+-- Delete one product.
+select * from products;
+select * from order_items;
+
+delete from order_items 
+where product_id = (select product_id from products where product_name='Running Shoes');
+
+delete from products 
+where product_name='Running Shoes';
+
+-- COUNT()
+-- Count total customers.
+
+select count(*) AS total_customers_cont
+ from customers;
+-- Count total products.
+
+select count(*) As total_products_count
+from products;
+-- Count total suppliers.
+
+select count(*) AS total_suppliers_count
+from suppliers;
+-- Count total orders.
+
+select count(*) AS total_orders_count
+from orders;
+-- Count total categories.
+
+select count(*) as total_category_count
+from categories;
+-- SUM()
+-- Calculate total stock.
+
+select * from products;
+select sum(stock_quantity) as total_stock
+from products;
+-- Calculate total inventory value (price × stock_quantity).
+
+select sum(price * stock_quantity) AS total_inventory
+from products;
+
+-- Calculate total revenue from order items.
+select * from order_items;
+select sum(quantity*unit_price) as total_revenue from order_items;
+-- Calculate total quantity sold.
+
+select sum(quantity) as total_quantity from order_items;
+-- Calculate total cost of inventory.
+
+select sum(cost_price * stock_quantity) AS total_inventory_cost
+From products;
+
+-- AVG()
+-- Average product price.
+
+select AVG(price) AS Avg_product_price
+From products;
+
+-- Average stock quantity.
+
+select AVG(stock_quantity) AS avg_stock_quantity
+From products;
+-- Average quantity sold.
+
+select AVG(quantity) AS Avg_quantity_sold
+From order_items;
+-- Average selling price.
+
+select AVG(unit_price) AS Avg_selling_price 
+from order_items;
+-- MIN()
+-- Cheapest product.
+
+select * from products;
+
+select Min(price) As Cheapest_product_price
+From products;
+
+SELECT product_name, price
+FROM products
+ORDER BY price
+LIMIT 1;
+-- Lowest stock quantity.
+
+select MIN(stock_quantity) AS Lowest_stock_quantity
+from products;
+-- MAX()
+-- Most expensive product.
+
+select Max(price) AS Most_expensive_product
+From products;
+-- Highest stock quantity.
+
+select Max(stock_quantity) AS highest_stock_quantity
+From products;
+
+SELECT product_name, price
+FROM products
+ORDER BY price DESC
+LIMIT 1;
+-- ROUND()
+-- Round the average product price to two decimal places.
+
+select Round(AVG(price),2) AS avg_product_price
+From products;
+
+-- Combined
+-- Display:
+-- Total Products
+-- Average Price
+-- Maximum Price
+-- Minimum Price
+
+select Count(*) AS total_products, AVG(price) AS Avg_price,
+MAX(price) As maximum_price, MIN(price) As Max_price
+From products;
+
+-- Count customers by city.
+
+SELECT
+    city,
+    COUNT(*) AS customers_city_count
+FROM customers
+GROUP BY city;
+-- Count customers by state.
+
+SELECT
+    state,
+    COUNT(*) AS customers_state_count
+FROM customers
+GROUP BY state;
+-- Count products by category.
+SELECT
+    category_id,
+    COUNT(*) AS total_products
+FROM products
+GROUP BY category_id;
+-- Count products by supplier.
+
+select * from products;
+select * from suppliers;
+select supplier_id, count(*) as total_suppliers
+from products
+group by supplier_id;
+-- Average product price by category.
+
+select category_id, AVG(price) as avg_product_price_by_category
+from products
+group by category_id;
+-- Average product price by supplier.
+
+select supplier_id, AVG(price) As avg_product_price_by_supplier
+from products
+group by supplier_id;
+-- Total stock by category.
+
+select category_id, sum(stock_quantity) AS total_stock_by_category
+from products
+group by category_id;
+-- Total stock by supplier.
+
+select supplier_id, sum(stock_quantity) AS total_stock_by_supplier
+from products
+group by supplier_id;
+-- Total revenue by product.
+
+select product_id, sum(quantity * unit_price) as total_revenue_by_product
+from order_items
+group by product_id;
+-- Total quantity sold by product.
+select * from orders;
+
+select product_id, sum(quantity) as total_quantity_sold
+from order_items
+group by product_id;
+-- Total orders per customer.
+
+select customer_id, count(*) as total_orders_per_customer
+from orders
+group by customer_id;
+-- Total orders by payment method.
+
+select payment_method, count(*) as total_orders_by_payment_method
+from orders
+group by payment_method;
+-- Total orders by order status.
+
+select order_status, count(*) as total_orders_by_status
+from orders 
+group by order_status;
+-- Average quantity sold by product.
+
+select product_id, Avg(quantity) as avg_quantity_sold_by_product
+from order_items
+group by product_id;
+
+-- Highest-priced product in each category.
+
+select c.category_name, Max(p.price) as highest_price
+from categories c
+Join products p
+On c.category_id = p.category_id
+group by c.category_name;
+
+-- Lowest-priced product in each category.
+
+SELECT c.category_name, MIN(p.price) AS lowest_price
+FROM products p
+JOIN categories c
+on c.category_id=p.category_id
+GROUP BY c.category_name;
 

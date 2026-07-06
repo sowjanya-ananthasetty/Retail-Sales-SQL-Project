@@ -185,3 +185,19 @@ group by order_status;
 select product_id, Avg(quantity) as avg_quantity_sold_by_product
 from order_items
 group by product_id;
+
+-- Highest-priced product in each category.
+
+select c.category_name, Max(p.price) as highest_price
+from categories c
+Join products p
+On c.category_id = p.category_id
+group by c.category_name;
+
+-- Lowest-priced product in each category.
+
+SELECT c.category_name, MIN(p.price) AS lowest_price
+FROM products p
+JOIN categories c
+on c.category_id=p.category_id
+GROUP BY c.category_name;

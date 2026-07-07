@@ -1,4 +1,6 @@
-## ✅ Completed Today
+# 📅 Progress Update
+
+## ✅ Completed
 
 ### 1. Aggregate Functions
 
@@ -52,7 +54,7 @@ Learned how to group data for business reporting.
 
 ### 3. HAVING Clause
 
-Completed practicing the `HAVING` clause to filter grouped results.
+Practiced the `HAVING` clause to filter grouped results.
 
 **Implemented queries for:**
 
@@ -66,6 +68,60 @@ Completed practicing the `HAVING` clause to filter grouped results.
 
 * `WHERE` filters rows **before** grouping.
 * `HAVING` filters groups **after** aggregation.
+
+---
+
+### 4. SQL JOINs
+
+Practiced joining related tables to retrieve meaningful business data.
+
+**Topics covered:**
+
+* INNER JOIN
+* LEFT JOIN
+* RIGHT JOIN
+* Multiple Table JOINs
+
+**Implemented queries for:**
+
+* Customers with their orders.
+* Products with category names.
+* Products with supplier names.
+* Order details with product names.
+* Customer names and payment methods.
+* Categories with their products.
+* Suppliers with their products.
+* Products with order details.
+* Customer order reports.
+* Product-category-supplier reports.
+* Customer revenue reports.
+* Supplier product reports.
+* Multi-table business reports using four or more tables.
+
+---
+
+### 5. Subqueries
+
+Learned how to write nested queries for filtering and comparison.
+
+**Topics covered:**
+
+* Scalar Subqueries
+* Subqueries using `IN`
+* Subqueries using `NOT IN`
+* Correlated Subqueries
+
+**Implemented queries for:**
+
+* Highest-priced product.
+* Lowest-priced product.
+* Customers who placed orders.
+* Customers who never placed orders.
+* Products priced above the average price.
+* Suppliers supplying products.
+* Categories containing products.
+* Products that have never been ordered.
+* Most expensive product in each category.
 
 ---
 
@@ -90,61 +146,55 @@ Completed practicing the `HAVING` clause to filter grouped results.
 * Aggregate Functions
 * GROUP BY
 * HAVING
+* INNER JOIN
+* LEFT JOIN
+* RIGHT JOIN
+* Multiple Table JOINs
+* Subqueries
 
 ---
 
 # 📈 Project Progress
 
-| Topic                         |    Status   |
-| ----------------------------- | :---------: |
-| Database Design               | ✅ Completed |
-| Sample Data                   | ✅ Completed |
-| Basic SQL Queries             | ✅ Completed |
-| WHERE Clause                  | ✅ Completed |
-| UPDATE                        | ✅ Completed |
-| DELETE                        | ✅ Completed |
-| Aggregate Functions           | ✅ Completed |
-| GROUP BY                      | ✅ Completed |
-| HAVING                        | ✅ Completed |
-| JOINs                         |    ⏳ Next   |
-| Subqueries                    |  ⏳ Pending  |
-| CTEs                          |  ⏳ Pending  |
-| Window Functions              |  ⏳ Pending  |
-| Views                         |  ⏳ Pending  |
-| Stored Procedures             |  ⏳ Pending  |
-| Triggers                      |  ⏳ Pending  |
-| Indexing & Query Optimization |  ⏳ Pending  |
-| Business Reports              |  ⏳ Pending  |
+| Topic                           |    Status   |
+| ------------------------------- | :---------: |
+| Database Design                 | ✅ Completed |
+| Sample Data                     | ✅ Completed |
+| Basic SQL Queries               | ✅ Completed |
+| WHERE Clause                    | ✅ Completed |
+| UPDATE                          | ✅ Completed |
+| DELETE                          | ✅ Completed |
+| Aggregate Functions             | ✅ Completed |
+| GROUP BY                        | ✅ Completed |
+| HAVING                          | ✅ Completed |
+| INNER JOIN                      | ✅ Completed |
+| LEFT JOIN                       | ✅ Completed |
+| RIGHT JOIN                      | ✅ Completed |
+| Multiple Table JOINs            | ✅ Completed |
+| Subqueries                      | ✅ Completed |
+| Common Table Expressions (CTEs) |    ⏳ Next   |
+| Window Functions                |  ⏳ Pending  |
+| Views                           |  ⏳ Pending  |
+| Stored Procedures               |  ⏳ Pending  |
+| Triggers                        |  ⏳ Pending  |
+| Indexing & Query Optimization   |  ⏳ Pending  |
+| Business Reports                |  ⏳ Pending  |
 
 ---
 
 # 🚀 Next Goal
 
-### SQL JOINs
+### Common Table Expressions (CTEs)
 
-Practice and master:
+Learn and practice:
 
-* INNER JOIN
-* LEFT JOIN
-* RIGHT JOIN
-* FULL OUTER JOIN (where supported)
-* CROSS JOIN
-* SELF JOIN
-* Multiple JOINs
+* Basic CTEs using `WITH`
+* Aggregations with CTEs
+* Joining CTEs with tables
+* Replacing complex subqueries with CTEs
 
-**Business report practice:**
+### Upcoming Topics
 
-* Customer order history
-* Product category reports
-* Supplier inventory reports
-* Revenue by category
-* Revenue by supplier
-* Order details with customer and product information
-
-**Long-term roadmap:**
-
-* Subqueries
-* Common Table Expressions (CTEs)
 * Window Functions
 * Views
 * Stored Procedures

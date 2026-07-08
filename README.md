@@ -15,6 +15,7 @@ Practiced SQL aggregate functions to perform data analysis.
 * MAX()
 * ROUND()
 
+
 **Implemented queries to:**
 
 * Count customers, products, suppliers, orders, and categories.

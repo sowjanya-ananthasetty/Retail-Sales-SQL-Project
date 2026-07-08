@@ -13,6 +13,7 @@ WHERE price = (
 );
 
 
+
 -- Question 2: Display the product(s) with the lowest price.
 
 SELECT product_name,

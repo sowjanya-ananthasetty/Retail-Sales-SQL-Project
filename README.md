@@ -1,4 +1,4 @@
-# 📅 Progress Update
+# Progress Update
 
 ## ✅ Completed
 
@@ -182,7 +182,7 @@ Learned how to write nested queries for filtering and comparison.
 
 ---
 
-# 🚀 Next Goal
+#  Next Goal
 
 ### Common Table Expressions (CTEs)
 

@@ -93,6 +93,7 @@ WHERE product_id NOT IN (
 );
 
 
+
 -- Question 9: Display the most expensive product
 -- in each category.
 

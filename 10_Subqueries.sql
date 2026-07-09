@@ -4,8 +4,7 @@
 
 -- Question 1: Display the product(s) with the highest price.
 
-SELECT product_name,
-       price
+SELECT product_name, price
 FROM products
 WHERE price = (
     SELECT MAX(price)

@@ -8,11 +8,11 @@
 
 -- Question 5: Display cumulative revenue.
 
--- Question 124: Compare each month's sales with the previous month using LAG().
+-- Question 6: Compare each month's sales with the previous month using LAG().
 
--- Question 125: Display next month's sales using LEAD().
+-- Question 7: Display next month's sales using LEAD().
 
--- Question 126: Calculate running total of revenue.
+-- Question 8: Calculate running total of revenue.
 
 -- Question 127: Display average price by category using OVER().
 

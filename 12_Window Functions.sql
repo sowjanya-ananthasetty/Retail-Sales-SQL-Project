@@ -14,6 +14,6 @@
 
 -- Question 8: Calculate running total of revenue.
 
--- Question 127: Display average price by category using OVER().
+-- Question 9: Display average price by category using OVER().
 
--- Question 128: Display customer spending rank.
+-- Question 10: Display customer spending rank.

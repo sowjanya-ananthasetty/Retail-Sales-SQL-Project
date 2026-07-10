@@ -1,1 +1,19 @@
+-- Question 119: Assign row numbers to products by price.
 
+-- Question 120: Rank products by price.
+
+-- Question 121: Dense rank products by price.
+
+-- Question 122: Rank products within each category.
+
+-- Question 123: Display cumulative revenue.
+
+-- Question 124: Compare each month's sales with the previous month using LAG().
+
+-- Question 125: Display next month's sales using LEAD().
+
+-- Question 126: Calculate running total of revenue.
+
+-- Question 127: Display average price by category using OVER().
+
+-- Question 128: Display customer spending rank.

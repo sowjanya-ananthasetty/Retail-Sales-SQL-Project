@@ -4,9 +4,9 @@
 
 -- Question 3: Dense rank products by price.
 
--- Question 122: Rank products within each category.
+-- Question 4: Rank products within each category.
 
--- Question 123: Display cumulative revenue.
+-- Question 5: Display cumulative revenue.
 
 -- Question 124: Compare each month's sales with the previous month using LAG().
 

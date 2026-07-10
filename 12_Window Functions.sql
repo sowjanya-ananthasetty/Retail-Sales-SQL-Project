@@ -1,8 +1,8 @@
--- Question 119: Assign row numbers to products by price.
+-- Question 1: Assign row numbers to products by price.
 
--- Question 120: Rank products by price.
+-- Question 2: Rank products by price.
 
--- Question 121: Dense rank products by price.
+-- Question 3: Dense rank products by price.
 
 -- Question 122: Rank products within each category.
 

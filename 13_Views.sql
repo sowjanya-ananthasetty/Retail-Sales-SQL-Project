@@ -1,4 +1,3 @@
-
 -- Question 129: Create a view for customer orders.
 
 -- Question 130: Create a view for product sales.

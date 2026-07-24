@@ -16,6 +16,7 @@ Practiced SQL aggregate functions to perform data analysis.
 * ROUND()
 
 
+
 **Implemented queries to:**
 
 * Count customers, products, suppliers, orders, and categories.

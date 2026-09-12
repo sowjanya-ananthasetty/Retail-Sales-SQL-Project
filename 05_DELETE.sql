@@ -4,6 +4,7 @@ select * from customers;
 select * from order_items;
 
 
+
 DELETE FROM order_items
 WHERE order_id IN (
     SELECT order_id

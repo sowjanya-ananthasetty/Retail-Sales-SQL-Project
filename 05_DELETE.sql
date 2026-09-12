@@ -73,3 +73,5 @@ where product_id = (select product_id from products where product_name='Running 
 
 delete from products 
 where product_name='Running Shoes';
+
+
